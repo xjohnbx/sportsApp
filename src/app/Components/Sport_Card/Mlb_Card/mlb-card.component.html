@@ -1,0 +1,18 @@
+<!-- MLB -->
+<StackLayout class="layout" orientation="horizontal" *ngFor="let competition of event.competitions">
+
+  <!-- Teams and Score -->
+  <StackLayout>
+    <ng-container *ngFor="let competitor of competition.competitors.reverse()">
+      <StackLayout orientation="horizontal">
+        <Label class="nameLabel"[text]="competitor.team.abbreviation"></Label>
+        <Label class="dash" text=" -"></Label>
+        <Label class="scoreLabel" [text]="competitor.score"></Label>
+      </StackLayout>
+    </ng-container>
+  </StackLayout>
+
+  <!-- Bases -->
+  <ns-bases [situation]="competition.situation" [inning]="competition.status.period" [isTopOfInning]="isTopOfInning(competition)"></ns-bases>
+
+</StackLayout>

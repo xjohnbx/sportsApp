@@ -1,0 +1,42 @@
+/* NFL classes */
+.grid {
+  width: 95%;
+  border-width: 1;
+  border-color: black;
+  margin: 5;
+  background-color: lightgreen;
+}
+
+.record, .clock, .team, .teamScore {
+  color: black;
+}
+.record {
+  font-size: 11;
+  margin: 2;
+  text-align: center;
+}
+
+.clock {
+  font-size: 12;
+  text-align: center;
+  margin: 2;
+}
+
+.team {
+  font-size: 12;
+  margin: 1;
+  text-align: center;
+}
+
+.teamScore {
+  font-size: 14;
+  vertical-align: middle;
+  text-align: center;
+  margin: 5;
+}
+
+.logo {
+  margin: 1;
+  height: 40;
+  width: 40;
+}

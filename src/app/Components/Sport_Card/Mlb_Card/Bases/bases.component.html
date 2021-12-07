@@ -1,0 +1,25 @@
+ <StackLayout orientation="horizontal">
+
+   <!-- Bases -->
+  <GridLayout class="gridLayout" columns="10, 10" rows="10, 10">
+    <!-- First Base -->
+    <Label [ngClass]="onFirst ? 'onBase' : 'emptyBase'" row="0" col="1"></Label>
+    <!-- Second Base -->
+    <Label [ngClass]="onSecond ? 'onBase' : 'emptyBase'" row="0" col="0"></Label>
+    <!-- Third Base -->
+    <Label [ngClass]="onThird ? 'onBase' : 'emptyBase'" row="1" col="0"></Label>
+  </GridLayout>
+
+  <!-- Balls, Strikes, Inning -->
+  <StackLayout>
+    <Label [text]="balls + ' - ' + strikes"></Label>
+    <Label class="label" [text]="inning + inningArrow"></Label>
+  </StackLayout>
+
+  <!-- Outs -->
+  <StackLayout class="outs" orientation="horizontal">
+    <Label [ngClass]="outs < 1 ? 'notOut' : 'isOut'"></Label>
+    <Label [ngClass]="outs < 2 ? 'notOut' : 'isOut'"></Label>
+    <Label [ngClass]="outs < 3 ? 'notOut' : 'isOut'"></Label>
+  </StackLayout>
+</StackLayout>

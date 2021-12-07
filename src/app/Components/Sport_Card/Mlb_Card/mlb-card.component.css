@@ -1,0 +1,23 @@
+/* MLB classes */
+.layout {
+  border-width: 1;
+  margin: 5;
+}
+
+.nameLabel {
+  width: 30;
+  margin-left: 1;
+  text-align: center;
+}
+
+.scoreLabel {
+  width: 20;
+  margin-right: 1;
+  text-align: center;
+}
+
+.dash {
+  margin-left: 1;
+  margin-right: 1;
+  text-align: center;
+}

@@ -1,0 +1,30 @@
+<ng-container *ngFor="let competition of event.competitions">
+  <GridLayout class="grid" horizontalAlignment="center" *ngIf="{awayTeam: competition.competitors[0], homeTeam: competition.competitors[1]} as teams" columns="40, 40, 50, *, 50, 40, 40" rows="*">
+
+    <!-- Away Team -->
+    <StackLayout row="0" col="0">
+      <Label class="team" [text]="teams.awayTeam.team.abbreviation" ></Label>
+      <Label class="record" [text]="teams.awayTeam.records[0].summary"></Label>
+    </StackLayout>
+    <image class="logo" src='~/app/images/nfl-logos/{{getImageRoute(teams.awayTeam.team.abbreviation)}}-logo.png' row="0" col="1"></image>
+    <Label class="teamScore" [text]="teams.awayTeam.score" row="0" col="2"></Label> 
+
+
+
+    <!-- Quarter and Clock -->
+    <StackLayout row="0" col="3">
+      <Label class="clock" [text]="'Q' + competition.status.period" row="0" col="3"></Label>
+      <Label class="clock" [text]="competition.status.displayClock"></Label>
+    </StackLayout>
+
+    <!-- Home Team -->
+    <Label class="teamScore" [text]="teams.homeTeam.score" row="0" col="4"></Label>
+    <image class="logo" src='~/app/images/nfl-logos/{{getImageRoute(teams.homeTeam.team.abbreviation)}}-logo.png' row="0" col="5"></image>
+    <StackLayout row="0" col="6">
+      <Label class="team" [text]="teams.homeTeam.team.abbreviation" ></Label>
+      <Label class="record" [text]="teams.homeTeam.records[0].summary"></Label>
+    </StackLayout>
+   
+
+  </GridLayout>    
+</ng-container> 

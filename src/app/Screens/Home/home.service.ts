@@ -12,6 +12,6 @@ export class HomeService {
   constructor(private http: HttpClient) { }
 
   public getScoreboardData(sport: string = Sport.nba): Observable<SportResponse> {
-    return this.http.get<SportResponse>("http://192.168.0.226:3000/scoreboard?sport=" + sport)
+    return this.http.get<SportResponse>("https://site.api.espn.com/apis/site/v2/sports/" + sport + "/scoreboard")
   }
 }
